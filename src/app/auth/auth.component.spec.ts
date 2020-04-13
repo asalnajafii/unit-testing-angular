@@ -21,8 +21,10 @@ describe('AuthComponent', () => {
     component = fixture.componentInstance;
   }));
   it('find user in list', () => {
+    const myUser = {value: {email: 'aasal_n@yahoo.com', pass: '123'}};
+    component.loginSystem(myUser);
     fixture.detectChanges();
-    expect(component.LoginList).toContain(mockUser);
+    expect( component.user).toBeTruthy();
   });
   it('set local storage', () => {
     const value = {email: 'hey@gamil.com', pass: '123'};
