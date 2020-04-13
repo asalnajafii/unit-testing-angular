@@ -1,0 +1,18 @@
+<form [formGroup]="loginForm">
+  <legend>authentication</legend>
+
+  <div class="form-group">
+    <input type="text" class="form-control" name="email" id="email" placeholder="email" formControlName="email">
+    <div class="alert alert-danger" *ngIf="email && email.dirty && email.invalid">
+      <span *ngIf="email.errors.required">this field is required</span>
+      <span *ngIf="email.errors.email">wrong email format</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="password" class="form-control" name="pass" id="pass" placeholder="pass" formControlName="pass">
+    <div class="alert alert-danger" *ngIf="pass && pass.dirty && pass.invalid">
+      <span *ngIf="pass.errors.required">this field is required</span>
+    </div>
+  </div>
+  <button type="submit"  (click)="loginSystem(loginForm)" class="btn btn-primary login-btn">login</button>
+</form>

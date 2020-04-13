@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { ParentDetailComponent } from './parent-detail/parent-detail.component';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ParentDetailComponent } from './parent-detail/parent-detail.component';
     ParentComponent,
     ChildComponent,
     ParentDetailComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,

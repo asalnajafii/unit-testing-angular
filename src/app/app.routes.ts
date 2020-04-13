@@ -6,6 +6,7 @@ import {NotFoundComponent} from './not-found/not-found.component';
 import {HomeComponent} from './home/home.component';
 import {ParentComponent} from './parent/parent.component';
 import {ParentDetailComponent} from './parent-detail/parent-detail.component';
+import {AuthComponent} from './auth/auth.component';
 
 export const Route: Routes = [
   {path: '', component: HomeComponent},
@@ -13,6 +14,7 @@ export const Route: Routes = [
   {path: 'form', component: FormComponent},
   {path: 'vote', component: VoteComponent},
   {path: 'parent', component: ParentComponent},
+  {path: 'login', component: AuthComponent},
   {path: 'parent/:id', component: ParentDetailComponent},
   {path: 'notFound', component: NotFoundComponent},
   {path: '**', redirectTo: 'notFound'}
