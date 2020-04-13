@@ -1,0 +1,18 @@
+<form [formGroup]="testForm">
+  <legend>reactive form test</legend>
+
+  <div class="form-group">
+    <input type="text" class="form-control" name="userName" id="userName" placeholder="userName" formControlName="userName">
+    <div class="alert alert-danger" *ngIf="userName && userName.dirty && userName.invalid">
+      <span *ngIf="userName.errors.required">this field is required</span>
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="text" class="form-control" name="email" id="email" placeholder="email" formControlName="email">
+    <div class="alert alert-danger" *ngIf="email && email.dirty && email.invalid">
+      <span *ngIf="email.errors.required">this field is required</span>
+      <span *ngIf="email.errors.email">wrong email format</span>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

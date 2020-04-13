@@ -1,0 +1,15 @@
+
+<a [routerLink]="['/parent',id]" >
+  <div class="bg-light container">
+    <br/>
+    <h6 class="text-dark">im child component</h6>
+    {{test}}
+    <br/>
+    <ul>
+      <li>{{id}}{{name}}</li>
+    </ul>
+  </div>
+
+</a>
+<br/>
+<i class="btn btn-primary btn-sm" (click)="deleteChild($event)">delete from child</i>

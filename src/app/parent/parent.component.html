@@ -1,0 +1,18 @@
+<input #name placeholder="insert data">
+<button class="btn-sm btn btn-warning  ml-3" (click)="addWithName(name.value)">
+  add from input
+</button>
+<button class="btn-success btn btn-sm ml-3" (click)="autoAdd(newOne)">
+  auto Add
+</button>
+<hr/>
+<div class="card">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let item of listData">
+      {{item.title}}
+      <i class="btn btn-danger btn-sm" (click)="deleteData(item)">delete from parent</i>
+      <app-child [test]="item.isRead" [name]="item.title" [id]="item.id" (deleteHandler)="deleteData(item)"></app-child>
+    </li>
+
+  </ul>
+</div>

@@ -1,0 +1,11 @@
+<div class="voter">
+  <i class="btn btn-success btn-sm"
+     [class.btn-primary]="myVote ==1"
+     (click)="upVote()"
+  >increment</i>
+  <span class="vote-count ml-3 mr-3">{{totalVotes}}</span>
+  <i class="btn btn-danger btn-sm"
+     [class.btn-primary]="myVote==-1"
+     (click)="downVote()"
+  > decrement </i>
+</div>

@@ -1,0 +1,22 @@
+
+  <input type="text" class="form-control" name="name" #data (keyup.enter)="insertTodo(data.value)" placeholder="insert">
+  <br/>
+
+  <div class="card">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let todo of todoList">{{todo.title}}
+        <span class="badge" [ngClass]="todo.completed?'badge-success':'badge-danger'">
+          <span *ngIf="todo.completed;else falseMode">complete</span>
+          <ng-template #falseMode>
+            <span> not complete</span>
+          </ng-template>
+
+        </span>
+        <button class="btn btn-link" (click)="deleteTodo(todo)">delete</button>
+      </li>
+
+    </ul>
+  </div>
+
+
+
