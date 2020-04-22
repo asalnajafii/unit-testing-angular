@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {DataModule} from './data.Module';
 import {DataService} from './data.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-parent',
@@ -43,4 +44,8 @@ export class ParentComponent implements OnInit {
     this.listData = this.listData.filter(item => item !== data);
     this.dataService.deletePost(data).subscribe();
   }
+
+ /* detailData(id: number) {
+    this.route.navigate(['/parent/', id]);
+  }*/
 }

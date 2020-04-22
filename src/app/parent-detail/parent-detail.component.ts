@@ -18,7 +18,6 @@ export class ParentDetailComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.id = +params.get('id');
-      console.log(this.id);
     });
     this.dataService.getById(this.id).subscribe(item => {
       this.dataItem = item;

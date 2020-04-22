@@ -39,7 +39,6 @@ export class AuthComponent implements OnInit {
     this.user = this.LoginList.find(user => {
       return user.email == loginForm.value.email && user.pass == loginForm.value.pass;
     });
-    console.log( this.user,'dddddddddddddd');
     if (this.user) {
      this.localStorageSetting(this.user);
       alert('login sucsess');

@@ -11,6 +11,7 @@
     <li class="list-group-item" *ngFor="let item of listData">
       {{item.title}}
       <i class="btn btn-danger btn-sm" (click)="deleteData(item)">delete from parent</i>
+<!--      <i class="btn btn-success btn-sm ml-3" (click)="detailData(item.id)">detail</i>-->
       <app-child [test]="item.isRead" [name]="item.title" [id]="item.id" (deleteHandler)="deleteData(item)"></app-child>
     </li>
 

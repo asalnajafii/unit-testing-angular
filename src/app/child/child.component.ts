@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {DataModule} from '../parent/data.Module';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-child',
@@ -12,12 +13,17 @@ export class ChildComponent implements OnInit {
   @Input() name;
   @Output() deleteHandler = new EventEmitter();
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
   }
+
   deleteChild(event) {
     this.deleteHandler.emit(event);
+  }
+
+  redirectPage(id) {
+    this.router.navigate(['parent', id]);
   }
 }

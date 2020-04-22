@@ -4,6 +4,7 @@ import {NO_ERRORS_SCHEMA} from '@angular/core';
 
 import {ParentComponent} from './parent.component';
 import {DataService} from './data.service';
+import {Router} from '@angular/router';
 
 describe('parentComponent', () => {
   let component: ParentComponent;

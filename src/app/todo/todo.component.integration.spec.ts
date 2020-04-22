@@ -31,6 +31,7 @@ describe('TodoComponent integration', () => {
 
   it('should load todo from server', () => {
     mockTodoService.getAll.and.returnValue(of(TODO));
+
     fixture.detectChanges();
     expect(component.todoList.length).toBe(3);
   });
